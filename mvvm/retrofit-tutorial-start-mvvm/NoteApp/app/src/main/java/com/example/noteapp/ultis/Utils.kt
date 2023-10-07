@@ -9,6 +9,7 @@ import android.os.Build
 import android.os.Environment
 import android.provider.DocumentsContract
 import android.provider.MediaStore
+import android.util.Log
 
 object Utils {
     @SuppressLint("ObsoleteSdkInt")
@@ -121,5 +122,8 @@ object Utils {
      */
     fun isGooglePhotosUri(uri: Uri): Boolean {
         return "com.google.android.apps.photos.content" == uri.authority
+    }
+    fun logd(message:String){
+        Log.d("fpt", "$message")
     }
 }
